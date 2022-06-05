@@ -1,0 +1,52 @@
+
+.container_header
+{
+    /* border: 1px solid red; */
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.container_nav
+{
+    /* border: 1px solid blue; */
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}   
+
+/* Quando for add outro btn na navegação esse comando vai trabalha o espaço dos elementos */
+.container_nav .btn
+{
+    margin-left: 8px;
+}
+
+/* Responsividade da página */
+
+@media screen and (max-width: 768px) 
+{
+    .container_nav
+    {      
+        width: 100%;
+
+        justify-content: right;
+    }
+}
+
+@media screen and (max-width: 320px) 
+{
+    .container_nav
+    {      
+        justify-content: center;
+    }
+}
+
+

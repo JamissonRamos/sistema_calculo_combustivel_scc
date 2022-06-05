@@ -1,0 +1,25 @@
+
+.modal
+{
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: var(--cor-bg-7);
+
+    z-index: 1;
+/* 
+    transform: translateX(calc(9% + 100px));
+    transition: all 0.9s cubic-bezier(0.68,-0.55,0.265,2.50) ; */
+}
+
+.modal.active
+{
+    width: 100vw;
+    height: 100vh;
+
+    transform: translateX(0%);
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> S.C.C. </title>
+
+    <!-- Link externo -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/5801faff1f.js" crossorigin="anonymous"></script>
+
+    <!-- Link do icone da aba do navegador -->
+    <link rel="shortcut icon" href="../assets/icone_introducao.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Estilo da página -->
+    <link rel="stylesheet" href="css/index/index.css"> <!-- Css padrão  -->
+    <link rel="stylesheet" href="css/index/header/style.css"> 
+    <link rel="stylesheet" href="css/index/main/style.css"> 
+    <link rel="stylesheet" href="css/modal/style.css"> 
+    <link rel="stylesheet" href="css/modal_resposta/style.css"> 
+    <link rel="stylesheet" href="css/modal_msgbox/style.css"> 
+    <!-- <link rel="stylesheet" href="css/index/footer/style.css"> 
+    <link rel="stylesheet" href="css/index/modal_tabela/style.css"> 
+    <link rel="stylesheet" href="css/index/modal_tabela_sem_registro/style.css">  -->
+
+</head>
+
+<body>
+   
+    <div class="container">
+
+        <header class="container_header"> 
+
+            <nav class="container_nav">
+
+                <button class="btn btn_secondary">  
+                    <span class="name_btn"> Meus históricos  </span>
+                 </button>
+        
+            </nav>
+
+        </header>
+
+        <main class="container_main">
+            
+            <section class="container_left">
+
+                <div class="container_first"> 
+
+                    <h1 class="title_first"> Gastos de Combustível </h1>
+
+                    <p class="txt">
+
+                        Você sabe quanto seu veiculo gata de combustível? ainda não? 
+                        Então essa aplicação foi feita pensando em você.
+                        Insira algumas informações e saiba quanto você gasta de combustível com o seu veículo :)
+                    
+                    </p>
+
+                </div>
+
+                <div class="container_second">
+
+                    <img class="contend_img" src="./assets/icone_introducao.png" alt="">
+
+                </div>
+
+            </section>
+
+            <section class="container_right">
+
+                <form id="idFormCadastro" class="frm_Cds" name="dados">
+                
+                    <div class="container_campos">
+
+                        <div class="input">
+                            
+                            <div class="container_title">
+
+                                <label class="title_input" for="media">
+                                    Quantos km com 1L seu veiculo faz?
+                                </label>
+
+                            </div>
+
+                            <input type="number" name="media" id="media" class="campo" data-required data-only-numbers>
+                            
+                        </div>
+                        
+                        <div class="input">
+                            
+                            <div class="container_title">
+
+                                <label class="title_input" for="media">
+                                    Qual o preço atual da gasolina no posto?
+                                </label>
+
+                            </div>
+
+                            <input type="number" name="preco" id="preco" class="campo" data-required data-only-numbers>                            
+                        </div>
+
+                        <div class="input">
+                            
+                            <div class="container_title">
+
+                                <label class="title_input" for="quilometros_dia"> 
+                                    Quantos km por dia você percorre?
+                                </label>
+    
+
+                            </div>
+
+                            <input type="number" name="quilometros_dia" id="quilometros_dia" class="campo" data-required data-only-numbers>                            
+                        </div>
+
+                        <div class="input">
+                            
+                            <div class="container_title">
+
+                                <label class="title_input" for="dias_semana">
+                                    Quantos dias da semana você anda com o veículo?
+                                </label>
+    
+                            </div>
+
+                            <input type="number" name="dias_semana" id="dias_semana" class="campo"  data-required data-only-numbers data-rend-numbe>                            
+                        </div>
+
+                        <div class="content_btn">
+
+                            <button id="btnCalcular" class="btn btn_secondary ">
+                                <span class="name_btn"> Calcular </span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </section>
+            
+        </main>
+
+        <footer> footer </footer>
+        
+    </div><!-- Fim div container -->
+
+    <p class="error-validation template">teste de mascara</p>  
+
+    <!-- Modal da página -->
+    <div id="idDivModal" class="modal "></div>
+    
+    <!-- MOdal de Resposta-->
+    <div id="idDivResposta" class="container_respo ">
+
+    <div class="conten_input">
+
+        <div class="conten_itens">
+
+            <div class="item_header">
+
+                <span class="title">gasto diário</span>
+
+            </div>
+
+            <div class="item_footer">
+
+                <span id="idSpanGatoD" class="title_valo">9,00</span>
+
+            </div>
+
+        </div>
+
+        <div class="conten_itens">
+
+            <div class="item_header">
+
+                <span class="title">gasto Semanal</span>
+
+            </div>
+
+            <div class="item_footer">
+
+                <span id="idSpanGatoS" class="title_valo">9,00</span>
+
+            </div>
+
+        </div>
+
+        <div class="conten_itens">
+
+            <div class="item_header">
+
+                <span class="title">gasto Mensal</span>
+
+            </div>
+
+            <div class="item_footer">
+
+                <span id="idSpanGatoM" class="title_valo">9,00</span>
+
+            </div>
+
+        </div>
+
+        <div class="conten_itens">
+
+            <div class="item_header">
+
+                <span class="title">gasto anual</span>
+
+            </div>
+
+            <div class="item_footer">
+
+                <span class="title_valo">R$</span> 
+                <span id="idSpanGatoA" class="title_valo">9,00</span>
+
+            </div>
+
+        </div> 
+    </div>
+
+    <div class="conten_btn">
+        <button id="idBtnSalvaHistorico" class="btn btn_primary ">
+            <span class="name_btn"> Salvar histórico </span>
+        </button>
+
+        <button id="idBtnDescartaHistorico" class="btn btn_secondary ">
+            <span class="name_btn"> Descarta </span>
+        </button>
+
+    </div>
+    </div>
+
+
+    <!-- Modal de MSGBOX -->
+    <div id="idNotifications" class="notifications ">
+
+        <div id="idNotificationsContent" class="notifications_content"> 
+            
+            <div id="idBoxIcone" class="box_icone">
+
+                <span id="idIcone" class="material-icons">check</span>
+
+                <!-- <span class="material-icons">warning_amber</span> -->
+
+                <!-- <span class="material-icons">close</span> -->
+                
+                <!-- <img src="gif.gif" alt="Foto para clip" width="350" height="240" style="position:absolute;clip: rect(90px, 280px, 160px, 80px); " />  -->
+            </div>
+
+            <div class="messagen">
+
+                <span id="idtitle" class="text_one"> ****** </span>
+
+                <p id="idMsg" class="text_two"> ******* </p>
+
+            </div>
+             
+        </div> <!-- fim da div notifications_content -->
+
+        <span id="idClose" class=" material-icons close">close</span>
+
+        <div id="idBarraProgreco" class="progress "></div> <!-- fim da div progress -->
+
+    </div> <!-- fim da div notifications -->
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+/*  Formatação padrões dos elementos da página  */
+
+*
+{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--cor-text-1);
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    outline: none;
+    letter-spacing: 0.06em; /* Para dar espaçamento entre as letras */
+
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+}
+
+:root
+{
+    --cor-bg-1: #FFFFFF;
+    --cor-bg-2: #52575C;
+    --cor-bg-3: #171717;
+    --cor-bg-4: #393939;
+    --cor-bg-5: #B20BDC;
+    --cor-bg-6: #9A9FA8;
+    --cor-bg-7: rgba(57, 57, 57, 0.94);
+    --cor-bg-8: #00BFA6;
+
+    --cor-border-1: #B20BDC;
+
+    --cor-box-shadow-1: rgba(0, 0, 0, 0.4);
+
+    --cor-txt-1: #FFFFFF;
+    --cor-txt-2: #B20BDC;
+    --cor-txt-3: #00BFA6;
+    --cor-txt-4: #9A9FA8;
+    --cor-txt-5: #171717;
+}
+
+/* Parte do scroll da tela */
+::-webkit-scrollbar
+{
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track
+{
+    /* trabalha a parte do fundo da barra de rolagem */
+
+    background: transparent; /* #e4e4e4*/
+
+    border-radius: 118px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    /* trabalha a parte de rolagem */
+
+    background: linear-gradient(0deg, var(--cor-bg-5) 100%, var(--cor-bg-7) 100%);
+
+    border: 3px solid transparent;
+    border-radius: 8px;
+
+    background-clip: content-box;
+}
+
+button
+{
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+/* FIM BLOCO DE FORMATAÇÕES PADRÕES DE ELEMENTOS */
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container
+{
+    border: 1px solid red;
+
+    width: 100vw;
+    min-width: 375px;
+    max-width: 1440px;
+    height: 100vh;
+
+    background-color: var(--cor-bg-1);
+
+    /* overflow: auto; */
+  
+}
+
+header, main, footer
+{
+    /* Os elementos recebe aqui o espaçamento do contêiner, assim pode trabalha de acordo a necessidade do projeto */
+
+    border: 1px solid blue;
+
+    margin: 1vh 8vw 2vh 8vw;
+}
+
+
+/* Padrões de btns */
+.btn
+{
+    /* border: 1px solid red; */
+
+    /* width: 100%; */
+    height: 40px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    background: none;
+
+    /* border: 2px hidden ;  */
+    border-radius: 18px;
+
+    cursor: pointer;
+    
+    transition: 0.8s;
+}
+
+.btn::before
+{
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+
+    background: linear-gradient(180deg, var(--cor-bg-5) 11.46%, var(--cor-bg-3) 100%);
+
+    transition: .8s;
+}
+
+.name_btn
+{
+    font-weight: 900;
+    font-size: 1em;
+
+    z-index: 1;
+}
+
+/* Btn primary */
+
+.btn_primary
+{
+    border: hidden;
+   
+    color: var(--cor-txt-1);
+
+   
+}
+
+.btn_primary:hover
+{
+    border: 2px solid var(--cor-border-1);
+
+    color: var(--cor-txt-2);
+
+    transition: all .10s ease-in-out;
+}
+
+.btn_primary::before
+{
+    height: 180%;
+
+    top: 0;
+
+    border-radius: 0 0 50% 50% ;
+}
+
+.btn_primary:hover::before
+{
+    height: 0;
+}
+
+/* Btn secondary */
+
+.btn_secondary
+{
+   border: 2px solid var(--cor-border-1);
+
+   color: var(--cor-txt-2);
+}
+
+.btn_secondary:hover
+{
+    border: hidden;
+
+    color: var(--cor-txt-1);
+
+    transition: all .30s ease-in-out;
+}
+
+.btn_secondary::before
+{
+    height: 0%;
+
+    top: 0;
+
+    border-radius: 0 0 50% 50% ;
+}
+
+.btn_secondary:hover::before
+{
+    height: 180%;
+}
+
+
+/* Formatação de aviso de validação de campos */
+
+.error-validation
+{
+    /* border: 1px solid red; */
+
+    width: 95%;
+
+    position: absolute;
+    top: 60px;
+    left: 10px;
+
+    font-size: .8em;
+    font-weight: 500;
+
+    color: var( --cor-txt-2);
+
+    overflow: auto;
+}
+
+.template
+{
+    display: none;
+}
+
+
+/* ELEMENTOS PADRÕES DA PÁGINA */
+
+
+/* Responsividade da página */
+@media screen and (max-width: 375px)
+{
+    .container
+    {   
+        border: 1px solid blue;
+        
+        width: 100vw;   
+        height: 100vh;
+
+        overflow: scroll;
+
+        padding: 0;
+    }
+
+    header, main, footer
+    {
+        width: 100%;
+    }
+
+    .error-validation
+    {
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .container
+    {   
+        border: 1px solid blue;
+        
+        width: 100vw;   
+        height: 100vh;
+
+        overflow: scroll;
+
+        padding: 0;
+    }
+
+    header, main, footer
+    {
+        width: 100%;
+    }
+
+    .error-validation
+    {
+        top: 60px;
+    }
+}
+

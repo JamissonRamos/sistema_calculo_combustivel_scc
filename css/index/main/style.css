@@ -1,0 +1,336 @@
+
+.container_main
+{
+    /* border: 1px solid red; */
+    
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.container_main .container_left
+{
+    /* border: 1px solid blue; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    margin-right: 10px;
+}
+
+.container_left .container_first
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.container_left .container_first .title_first
+{
+    /* border: 1px solid; */
+
+    width: 100%;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8em;
+    line-height: 50px;
+    text-align: center;
+
+    color: var(--cor-txt-2);
+
+    margin-bottom: 18px;
+
+    transition: all .8s ease-out;
+}
+
+.container_left .container_first .txt
+{
+    /* border: 1px solid red; */
+
+    width: 80%;
+
+    padding: .4em 2em;
+    margin: 0 auto;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: .8em;
+    line-height: 28px;
+    text-align: justify;
+    
+    color: var(--cor-txt-4);
+}
+
+.container_left .container_second
+{
+    /* border: 1px solid blue; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: .5em;
+}
+
+.container_left .container_second .contend_img
+{
+    width: 70%;
+    height: 100%;
+}
+
+.container_main .container_right
+{
+    border: 1px solid blue;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_right .frm_Cds
+{
+    /* border: 1px solid red; */
+
+    width: 500px;
+    height: 525px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1em .8em .8em .5em;
+    margin: 1em .2em;
+
+    background-color: var(--cor-bg-2);
+
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 2px var(--cor-bg-6), -0.4em 0.4em .2em .1em  var(--cor-bg-6);
+
+}
+
+.container_right .frm_Cds .container_campos
+{
+    /* border: 1px solid blue; */
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.container_right .frm_Cds .container_campos .input
+{
+    /* border: 1px solid yellow; */
+
+    width: 100%;
+    height: 75px; /* Ao mudar valor a propriedade de top do input pode ser afetada */
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: .5em;
+}
+
+.container_right .frm_Cds .container_campos .input .container_title
+{
+    /* border: 1px solid rebeccapurple; */
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; 
+}
+
+.container_right .frm_Cds .container_campos .input .container_title .title_input
+{
+    /* border: 1px solid red; */
+    padding: 0 .1em;
+
+    font-size: 1.1em;
+    font-weight: 400;
+    
+    color: var(--cor-txt-4);
+}
+
+.container_right .frm_Cds .container_campos .input .campo
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+   
+    position: absolute;
+    top: 8%; /*  BAsta muda o valor da % para dar espaço entre o elemento de input e a label */
+
+    padding: .1em 1.2em ;
+
+    border-bottom: 2px solid var(--cor-txt-4);
+
+    background-color: transparent;
+
+    color: var(--cor-txt-4);
+
+    font-size: 1em;
+}
+
+.container_right .frm_Cds .input .campo:focus
+{
+    top: 24px;
+
+    border-bottom: 2px solid var(--cor-border-1);
+}
+
+.container_right .frm_Cds .input.preenchido .campo 
+{
+    top: 24px;
+
+    border-bottom: 2px solid var(--cor-border-1);
+}
+
+.container_right .frm_Cds .content_btn
+{
+    /* border: 1px solid red; */
+    width: 60%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_right .frm_Cds .content_btn .btn
+{
+    width: 70%;
+    height: 100%;
+}
+
+/* Responsividade da página */
+
+@media screen and (max-width: 1024px)
+{
+
+    .container_left .container_first .title_first
+    {   
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .container_left .container_first .txt
+    {
+        width: 100%;
+
+        padding: .8em;
+    }
+
+    .container_right 
+    {
+        padding: 1em;
+    }
+
+    .container_right .frm_Cds .container_campos .input
+    {
+        height: 90px; /* Ao mudar valor a propriedade de top do input pode ser afetada */
+
+        margin-bottom: .5em;
+    }
+
+    .container_right .frm_Cds .container_campos .input .campo
+    {
+        top: 38%; /*  BAsta muda o valor da % para dar espaço entre o elemento de input e a label */
+    }
+    .container_right .frm_Cds .input .campo:focus,
+    .container_right .frm_Cds .input.preenchido .campo 
+    {
+        top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+    .container_main
+    {
+
+        flex-direction: column;
+
+    }
+
+    .container_left .container_first .txt
+    {
+        width: 90%;
+
+        padding: .4em 2em;
+        margin: 0 auto;
+
+        text-align: justify;
+        
+    }
+
+    .container_right .frm_Cds
+    {
+        /* border: 1px solid red; */
+
+        height: 600px;
+
+        padding: .8em ;
+    }
+
+}
+
+@media screen and (max-width: 425px)
+{
+    .container_left .container_first .txt
+    {
+        width: 100%;
+
+        padding: .8em;    
+    }
+
+    .container_left .container_first .title_first
+    {
+        font-weight: 700;
+        font-size: 1.4em;
+
+        text-align: center;
+    }
+
+    .container_right .frm_Cds
+    {
+        /* border: 1px solid red; */
+
+        width: 300px;
+        height: 600px;
+
+        padding: .8em ;
+    }
+}
