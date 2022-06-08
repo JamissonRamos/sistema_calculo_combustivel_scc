@@ -1,0 +1,169 @@
+.container_table_historico
+{
+    /* border: 1px solid red; */
+
+    width: 0vw;
+    height: 0vh;
+
+    position: absolute;
+    top: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    /* padding: 2em 1em; */
+
+    background: var(--cor-bg-1);
+
+    border-radius: 18px;
+
+    z-index: 3;
+
+    transform: translateX(calc(9% + 100px));
+    transition: all 1s cubic-bezier(0.68,-0.55,0.265,2.50) ;
+}
+
+.container_table_historico.active
+{
+    width: 90vw;
+    min-width: 600px;
+    height: 90vh;
+
+    box-shadow: 2px 4px 2px 5px var(--cor-box-shadow-1);
+    
+    transform: translateX(0%);
+}
+
+.container_table
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    align-items: top;
+    justify-content: center;
+
+    overflow: auto;
+}
+
+.container_table .table
+{
+    width: 90%;
+    height: 100px;
+
+    border-collapse: collapse;    
+
+    overflow-x: scroll;
+}
+
+thead tr th
+{
+    position: sticky;
+    top: 0;
+    
+    padding: 1.5em .4em; 
+
+    background-color: var(--cor-bg-5);
+
+    color: var(--cor-txt-1);
+
+    font-weight: 900;
+    font-size: 1.1em;
+    text-align: center;
+
+    border-bottom: 2px solid var(--cor-bg-1);
+}
+
+
+tbody tr, td
+{
+    padding: .8em .2em;
+
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+
+    color: var(--cor-txt-5);
+}
+
+
+/* Para deixa a linha da tabela uma diferente da outra zebra */
+tbody tr:nth-child(even)
+{
+    background-color: var(--cor-bg-6)
+}
+
+/* Mudar a cor do tr quando receber o foco */
+tbody tr:hover
+{
+    background-color: var(--cor-bg-8);
+
+    color: var(--cor-txt-1);
+}
+
+.td_button
+{
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.td_button .icone
+{
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    outline: none;
+
+    cursor: pointer;
+}
+
+.container_table_historico .close
+{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    padding: 5px;
+
+    cursor: pointer;
+
+    transition: .2s linear;
+    opacity: 0.7;
+}
+
+.container_table_historico  .close:hover
+{
+    opacity: 1;
+
+    transition: all .8s ease-in-out;
+
+    transform: rotate(175deg);
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px)
+{
+    thead tr th
+    {
+        padding: .8em 1em; 
+        font-weight: 900;
+        font-size: .8em;
+
+    }
+
+    .container_table_historico .close
+    {
+        position: absolute;
+        top: 2%;
+        right: -0.3%;
+    }
+
+}

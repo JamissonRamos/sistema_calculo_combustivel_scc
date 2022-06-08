@@ -4,9 +4,9 @@
     width: 0;
     height: 0;
 
-    position: relative;
-    top: 0;
-    right: -300px;
+    /* position: relative; */
+    /* top: 0;
+    right: -300px; */
 
     padding: 2em 1.2em 2em 1em;
 
@@ -159,13 +159,13 @@
 }
 
 .progress.active::before
-{
+{   
+    
     animation: barraProgress 5s linear forwards;
+    
 }
 
 @keyframes barraProgress{
-    
-    20%{ right: 0;}
 
-    100%{ right: 100%; }
-    }
+    100%{ right: 100%; };
+}

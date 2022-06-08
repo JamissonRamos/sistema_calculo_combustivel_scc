@@ -19,12 +19,13 @@
     <link rel="stylesheet" href="css/index/index.css"> <!-- Css padrão  -->
     <link rel="stylesheet" href="css/index/header/style.css"> 
     <link rel="stylesheet" href="css/index/main/style.css"> 
+    <link rel="stylesheet" href="css/index/footer/style.css"> 
     <link rel="stylesheet" href="css/modal/style.css"> 
     <link rel="stylesheet" href="css/modal_resposta/style.css"> 
-    <link rel="stylesheet" href="css/modal_msgbox/style.css"> 
-    <!-- <link rel="stylesheet" href="css/index/footer/style.css"> 
-    <link rel="stylesheet" href="css/index/modal_tabela/style.css"> 
-    <link rel="stylesheet" href="css/index/modal_tabela_sem_registro/style.css">  -->
+    <link rel="stylesheet" href="css/modal_tabela/style.css"> 
+    <link rel="stylesheet" href="css/modal_tabela_sem_registro/style.css">  
+    <link rel="stylesheet" href="css/modal_msgbox/style.css">  
+
 
 </head>
 
@@ -36,7 +37,7 @@
 
             <nav class="container_nav">
 
-                <button class="btn btn_secondary">  
+                <button id="idButtonHistorico" class="btn btn_secondary">  
                     <span class="name_btn"> Meus históricos  </span>
                  </button>
         
@@ -146,7 +147,52 @@
             
         </main>
 
-        <footer> footer </footer>
+        <footer>
+
+            <section class="container_footer">
+
+                <div class="title_criador">
+
+                    <a class="link_portifolio" href="https://portfolio-jamisson.web.app/" target="_blank" >
+                        
+                        <span class="text text_first">Desenvolvido por</span>
+                        
+                        <span class="text text_second">Jamisson { }</span>
+                    </a>
+
+                </div>
+
+                <div class="container_redesocial">
+                    
+                    <div class="box_card_social">
+                    
+                        <a  class="btn_menu_lateral" target="_blank" href="https://www.linkedin.com/in/jamisson-lira-ramos">
+                            <i class=" icone_menu fab fa-linkedin-in"> </i>
+                        </a>
+
+                    </div>
+
+                    <div class="box_card_social">
+                    
+                        <a  class="btn_menu_lateral" target="_blank" href="https://github.com/JamissonRamos?rel=outbound">
+                            <i class=" icone_menu fab fa-github"> </i>
+                        </a>
+
+                    </div>
+
+                    <div class="box_card_social">
+                    
+                        <a  class="btn_menu_lateral" target="_blank" href="https://www.instagram.com/jamissonliraramos/">
+                            <i class=" icone_menu fab fa-instagram"> </i>
+                        </a>
+
+                    </div>         
+            
+                </div>
+
+            </section>
+
+        </footer>
         
     </div><!-- Fim div container -->
 
@@ -218,7 +264,7 @@
 
             <div class="item_footer">
 
-                <span class="title_valo">R$</span> 
+                
                 <span id="idSpanGatoA" class="title_valo">9,00</span>
 
             </div>
@@ -238,6 +284,59 @@
     </div>
     </div>
 
+    <!-- Modal da tabela -->
+    <div id="idDivTebelaHistorico" class="container_table_historico ">
+
+        <div class="container_table">
+        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>preço da gasolina</th>
+                        <th>media km /1L</th>
+                        <th>gasto diário</th>
+                        <th>gasto semanal</th>
+                        <th>gasto mensal</th>
+                        <th>gasto anual</th>
+                        <th colspan="1">ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="idTbodyHistorico">
+
+                </tbody>
+
+            </table>
+            
+        </div>
+
+        <div>
+
+            <button id="idButtonLimparHistorico" class="btn btn_secondary ">
+                <span class="name_btn"> Limpar Históricos </span>
+            </button>
+
+        </div>
+         
+        <span id="idCloseListaHistorico" class=" material-icons close">close</span>
+    </div>
+
+    <!-- Modal de aviso sem registro -->
+    <div id="idDivSemRegistro" class="container_Msg_Sem_Registro ">
+
+        <div class="primary_block">
+
+            <h1 class="title">Não existe valores salvos</h1>
+
+        </div>
+
+        <div class="block_secondary">
+            <img class="icone" src="assets/icone_nãoExisteRegistro.png" alt="Não Existe Registro">
+        </div>
+
+        <span id="idSpanCloseSemRegistro" class=" material-icons close">close</span>
+    </div>
 
     <!-- Modal de MSGBOX -->
     <div id="idNotifications" class="notifications ">

@@ -8,7 +8,7 @@ export async function receberDadosFrm(inputMedia, inputPreco, inputQuilometrosDi
 
     let arrayDadosCalculados = await new ObjDadosCalculados(inputPreco, inputMedia, resulDiario, resulSemanal, resulMensal, resulAnual);
     
-    //console.log(arrayDadosCalculados);
+    console.log(arrayDadosCalculados);
   
     return arrayDadosCalculados;
 

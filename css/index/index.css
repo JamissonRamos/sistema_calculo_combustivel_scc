@@ -73,6 +73,14 @@
     background-clip: content-box;
 }
 
+/* Retirar as Arrows do input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 button
 {
     background-color: transparent;
@@ -92,7 +100,7 @@ body
 
 .container
 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     width: 100vw;
     min-width: 375px;
@@ -109,7 +117,7 @@ header, main, footer
 {
     /* Os elementos recebe aqui o espaçamento do contêiner, assim pode trabalha de acordo a necessidade do projeto */
 
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 
     margin: 1vh 8vw 2vh 8vw;
 }
@@ -265,7 +273,7 @@ header, main, footer
 {
     .container
     {   
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         
         width: 100vw;   
         height: 100vh;
@@ -290,7 +298,7 @@ header, main, footer
 {
     .container
     {   
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         
         width: 100vw;   
         height: 100vh;
