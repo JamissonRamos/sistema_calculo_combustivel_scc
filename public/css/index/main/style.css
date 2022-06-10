@@ -336,3 +336,15 @@
         padding: .8em ;
     }
 }
+@media screen and (max-width: 376px)
+{
+    .container_right .frm_Cds
+    {
+        /* border: 1px solid red; */
+
+        width: 350px;
+        height: 600px;
+
+        padding: .8em ;
+    }
+}

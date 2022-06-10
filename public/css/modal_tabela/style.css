@@ -28,7 +28,7 @@
 .container_table_historico.active
 {
     width: 90vw;
-    min-width: 600px;
+    /* min-width: 600px; */
     height: 90vh;
 
     box-shadow: 2px 4px 2px 5px var(--cor-box-shadow-1);
@@ -165,5 +165,38 @@ tbody tr:hover
         top: 2%;
         right: -0.3%;
     }
+
+}
+@media screen and (max-width: 376px)
+{
+   
+ 
+    .container_table
+    {
+        /* border: 1px solid red; */
+
+        height: 80%;
+        justify-content: flex-start;
+
+        margin-top: 30px;
+        padding-top: 0px;
+    }
+
+    tbody tr, td
+    {
+        padding: .6em .8em;
+
+        font-weight: 400;
+        font-size: .9em;
+    }
+
+    thead tr th
+    {           
+        padding: .8em; 
+
+        font-weight: 500;
+        font-size: .8em;
+    }
+
 
 }

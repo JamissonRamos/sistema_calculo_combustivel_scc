@@ -269,7 +269,7 @@ header, main, footer
 
 
 /* Responsividade da página */
-@media screen and (max-width: 375px)
+@media screen and (min-width: 375px)
 {
     .container
     {   
@@ -278,14 +278,18 @@ header, main, footer
         width: 100vw;   
         height: 100vh;
 
-        overflow: scroll;
+        /* overflow: scroll; */
 
         padding: 0;
     }
 
     header, main, footer
     {
+        /* border: 1px solid blue; */
+
         width: 100%;
+
+        margin: 0;
     }
 
     .error-validation
