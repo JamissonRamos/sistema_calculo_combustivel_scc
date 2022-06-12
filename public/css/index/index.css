@@ -283,6 +283,8 @@ header, main, footer
         width: 100vw;   
         height: 100vh;
 
+        display: block;
+        
         /* overflow: scroll; */
 
         padding: 0;
@@ -311,6 +313,8 @@ header, main, footer
         
         width: 100vw;   
         height: 100vh;
+
+        display: block;
 
         overflow: scroll;
 
