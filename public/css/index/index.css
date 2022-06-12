@@ -124,7 +124,7 @@ header, main, footer
 
     /* border: 1px solid blue; */
 
-    margin: 1vh 8vw 2vh 8vw;
+    margin: 2vh 8vw 1vh 8vw;
 }
 
 
@@ -283,8 +283,8 @@ header, main, footer
         width: 100vw;   
         height: 100vh;
 
-        display: block;
-        
+        /* display: block; */
+
         /* overflow: scroll; */
 
         padding: 0;

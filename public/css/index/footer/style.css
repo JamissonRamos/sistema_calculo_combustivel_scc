@@ -120,3 +120,29 @@
         height: 40px;
     }
 }
+
+@media screen and (max-width: 375px)
+{
+
+    .container_footer
+    {
+        padding: 0;
+    }
+
+    .title_criador
+    {
+        /* border: 1px solid red; */
+    
+        width: 75%;
+        text-align: left;
+        
+    }
+
+    .container_redesocial
+    {
+        /* border: 1px solid blue; */
+
+        width: 25%;
+        height: 40px;
+    }
+}
